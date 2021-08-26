@@ -1,0 +1,38 @@
+{
+	"info": {
+		"name": "Code Samples",
+		"_postman_id": "099dc8fc-dadd-c9af-a6e7-3efccd3ff46d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/forms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"departmentId\": \"D0000015\",\n\t\"eventType\": \"r_p_a\",\n\t\"storeId\": \"S10000199\",\n\t\"rdata\": {\n\t\t\"key1\": \"value1\",\n\t\t\"key2\": \"value2\"\n\t},\n\t\"rForms\": [ \"abc\", \"def\"] \n}"
+				},
+				"url": {
+					"raw": "localhost:8080/form",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
