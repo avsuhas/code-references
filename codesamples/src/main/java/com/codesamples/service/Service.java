@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Component;
 
-import com.codesamples.model.Request;
+
 import com.codesamples.model.Response;
 
 
@@ -15,7 +15,7 @@ import com.codesamples.model.Response;
 @Component
 public class Service {
 
-	public Response someServiceImpl(Request requestPayload) {
+	public Response someServiceImpl(String string) {
 
 		Response response = new Response();
 		response.setIdentefier(UUID.randomUUID().toString());

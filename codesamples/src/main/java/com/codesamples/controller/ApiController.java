@@ -43,7 +43,7 @@ public class ApiController {
 	public ResponseEntity<Response> handleAPIrequest(@RequestBody @Valid Request requestPayload, 
 													@RequestHeader HttpHeaders headers) {
 		
-		Response responseEntity = service.someServiceImpl(requestPayload);
+		Response responseEntity = service.someServiceImpl(requestPayload.getEventType());
 
 		//Add the HATEOS links
 		Link link = linkTo(methodOn(ApiController.class)
