@@ -15,11 +15,24 @@ import com.codesamples.model.Response;
 @Component
 public class Service {
 
-	public Response someServiceImpl(String string) {
+	public Response someServiceImpl(String eventType) {
 
 		Response response = new Response();
 		response.setIdentefier(UUID.randomUUID().toString());
 		response.setStatusMessage("event pending");
+		
+		if(eventType != null) {
+			if(eventType.contains("EVENT_TYPE_RENDER")) {
+				response.setDisplay(false);
+			}
+			if(eventType.contains("EVENT_TYPE_PRINT")) {
+				response.setPrint(false);
+			}
+			if(eventType.contains("EVENT_TYPE_ARCHIVE")) {
+				response.setStored(false);
+			}
+					
+		}
 		return response;
 	}
 
